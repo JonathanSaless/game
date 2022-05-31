@@ -1,56 +1,106 @@
 import interact from "https://cdn.interactjs.io/v1.9.20/interactjs/index.js";
 
-interact(".trash").dropzone({
-  accept: ".object",
+var infoPontos = document.getElementById("score");
+var pontos = 0;
+
+interact(".trashPlastico").dropzone({
+  accept: ".objPlastico, .objMetal, .objPapel, .objOrganico",
   ondrop: (event) => {
     var draggableElement = event.relatedTarget;
     draggableElement.style.visibility = "hidden";
-    console.log("Dropado");
+    console.log(draggableElement.className == "objPlastico notSelected");
+    if (draggableElement.className == "objPlastico notSelected") {
+      console.log("Dropado");
+      pontuou();
+    } else {
+      console.log("Dropado errado");
+    }
   },
 });
 
-interact(".object").draggable({
-  // movimentação suave
+interact(".objPlastico").draggable({
   inertia: true,
-
-  /*    MODIFICADORES
-  Define que apenas o determinado objeto será movimentado.
-  */
   modifiers: [
     interact.modifiers.restrictRect({
       endOnly: true,
     }),
   ],
-
-  /*    OBSERVADORES
-  Determina o que deve ser executado enquanto uma ação de movimentação
-  estiver acontecendo.
-  */
   listeners: { move: dragMoveListener },
 });
 
-function dragMoveListener(event) {
-  let target = event.target;
-  // calcula a positção final do objeto
-  let x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
-  let y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
+interact(".trashMetal").dropzone({
+  accept: ".objMetal",
+  ondrop: (event) => {
+    var draggableElement = event.relatedTarget;
+    draggableElement.style.visibility = "hidden";
+    console.log("Dropado");
+    pontuou();
+  },
+});
 
-  // realiza a mudança visual do objeto, através de uma transformação
-  target.style.transform = `translate(${x}px, ${y}px)`;
+interact(".objMetal").draggable({
+  inertia: true,
+  modifiers: [
+    interact.modifiers.restrictRect({
+      endOnly: true,
+    }),
+  ],
+  listeners: { move: dragMoveListener },
+});
 
-  // atualiza a posição do objeto
-  target.setAttribute("data-x", x);
-  target.setAttribute("data-y", y);
-}
+interact(".trashPapel").dropzone({
+  accept: ".objPapel",
+  ondrop: (event) => {
+    var draggableElement = event.relatedTarget;
+    draggableElement.style.visibility = "hidden";
+    console.log("Dropado");
+    pontuou();
+  },
+});
+
+interact(".objPapel").draggable({
+  inertia: true,
+  modifiers: [
+    interact.modifiers.restrictRect({
+      endOnly: true,
+    }),
+  ],
+  listeners: { move: dragMoveListener },
+});
+
+interact(".trashOrganico").dropzone({
+  accept: ".objOrganico",
+  ondrop: (event) => {
+    var draggableElement = event.relatedTarget;
+    draggableElement.style.visibility = "hidden";
+    console.log("Dropado");
+    pontuou();
+  },
+});
+
+interact(".objOrganico").draggable({
+  inertia: true,
+  modifiers: [
+    interact.modifiers.restrictRect({
+      endOnly: true,
+    }),
+  ],
+  listeners: { move: dragMoveListener },
+});
 
 function iniciarJogo() {
   var goFS = document.getElementById("goFS");
   goFS.addEventListener(
     "click",
-    function () {
+    () => {
       var videoElement = document.getElementById("main").requestFullscreen();
       videoElement.requestFullscreen();
     },
     false
   );
 }
+function pontuou() {
+  pontos += 1000;
+  infoPontos.innerHTML = pontos;
+}
+function acertou() {}
