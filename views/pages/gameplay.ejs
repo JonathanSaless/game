@@ -8,7 +8,7 @@
       content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
     />
     <link rel="manifest" href="/manifest.json" />
-    <script src="src/index.js" type="module"></script>
+    <script src="/src/index.mjs" type="module"></script>
     <link rel="stylesheet" href="style.css" />
     <title>ColetaPARA - Grid style</title>
   </head>
@@ -18,37 +18,17 @@
         <div id="score">0000</div>
         <div id="life">&#128516&#128516&#128516</div>
       </div>
-      <div class="objects">
-        <div class="objPlastico notSelected">
-          <div id="obj1"></div>
-          <div id="obj2"></div>
-          <div id="obj3"></div>
-          <div id="obj4"></div>
-        </div>
-        <div class="objMetal notSelected">
-          <div id="obj5"></div>
-          <div id="obj6"></div>
-          <div id="obj7"></div>
-          <div id="obj8"></div>
-        </div>
-        <div class="objPapel notSelected">
-          <div id="obj9"></div>
-          <div id="obj10"></div>
-          <div id="obj11"></div>
-          <div id="obj12"></div>
-        </div>
-        <div class="objOrganico notSelected">
-          <div id="obj13"></div>
-          <div id="obj14"></div>
-          <div id="obj15"></div>
-          <div id="obj16"></div>
-        </div>
+      <div class="objects notSelected">
+        <div class="lixo objPlastico"></div>
+        <div class="lixo objMetal"></div>
+        <div class="lixo objPapel"></div>
+        <div class="lixo objOrganico"></div>
       </div>
       <div class="footer">
-        <div class="trashPlastico"></div>
-        <div class="trashMetal"></div>
-        <div class="trashPapel"></div>
-        <div class="trashOrganico"></div>
+        <div class="lixeira trashPlastico"></div>
+        <div class="lixeira trashMetal"></div>
+        <div class="lixeira trashPapel"></div>
+        <div class="lixeira trashOrganico"></div>
       </div>
       <button id="goFS">Iniciar Jogo</button>
     </div>
