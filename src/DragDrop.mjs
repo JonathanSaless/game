@@ -24,7 +24,7 @@ function draggable(obj_id) {
     inertia: true,
     modifiers: [
       interact.modifiers.restrictRect({
-        endOnly: true,
+        restriction: "#main",
       }),
     ],
     listeners: { move: dragMoveListener },
