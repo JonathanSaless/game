@@ -1,4 +1,4 @@
-class Trash {
+class Lixeira {
   constructor(color, type) {
     this.color = color;
     this.type = type;
@@ -25,3 +25,5 @@ class Trash {
     return true;
   }
 }
+
+module.exports = Lixeira;

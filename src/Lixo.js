@@ -1,4 +1,4 @@
-class Object {
+class Lixo {
   constructor(name, type) {
     this.name = name;
     this.type = type;
@@ -12,3 +12,5 @@ class Object {
     return this.type;
   }
 }
+
+module.exports = Lixo;
