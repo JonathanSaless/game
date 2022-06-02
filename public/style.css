@@ -7,6 +7,15 @@
   src: url("assets/fonts/PublicPixel.ttf") format("truetype");
 }
 
+/* Colors */
+:root {
+  --blue-cloud-0: #d5f3fe;
+  --blue-cloud-1-light: #66d3fa;
+  --blue-cloud-2-light: #3c99dc;
+  --blue-cloud-1-dark: #2565ae;
+  --blue-cloud-2-dark: #0f5298;
+}
+
 .notSelected {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -38,82 +47,58 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  background-color: #AACEC8;
+  background-color: lightgrey;
 }
 
-.objMetal {
+.lixo {
   height: 9vh;
   width: 9vh;
-  
+
   border-radius: 50%;
   border: 2px dashed black;
 
-  margin: 20px;
+  margin: 10px;
+  background-color: cyan;
+}
+
+.objMetal {
   background-color: yellow;
 }
 
 .objPlastico {
-  height: 9vh;
-  width: 9vh;
-  
-  border-radius: 50%;
-  border: 2px dashed black;
-
-  margin: 20px;
   background-color: red;
 }
 .objPapel {
-  height: 9vh;
-  width: 9vh;
-  
-  border-radius: 50%;
-  border: 2px dashed black;
-
-  margin: 20px;
   background-color: blue;
 }
 
 .objOrganico {
-  height: 9vh;
-  width: 9vh;
-  
-  border-radius: 50%;
-  border: 2px dashed black;
-
-  margin: 20px;
   background-color: brown;
 }
 
 .footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-items: center;
   align-content: center;
+}
 
-  background-color: #50AA82;
+.lixeira {
+  height: 13vh;
+  width: 13vh;
 }
 
 .trashPlastico {
-  height: 10vh;
-  width: 10vh;
-  border: 2px dashed black;
-  background-color: red;
+  filter: brightness(0) saturate(100%) invert(37%) sepia(78%) saturate(7489%)
+    hue-rotate(352deg) brightness(96%) contrast(92%);
 }
+
 .trashMetal {
-  height: 10vh;
-  width: 10vh;
-  border: 2px dashed black;
   background-color: yellow;
 }
 .trashPapel {
-  height: 10vh;
-  width: 10vh;
-  border: 2px dashed black;
   background-color: blue;
 }
 .trashOrganico {
-  height: 10vh;
-  width: 10vh;
-  border: 2px dashed black;
   background-color: brown;
 }
