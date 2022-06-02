@@ -16,7 +16,7 @@ app.use("/src", express.static("src"));
 app.set("view engine", "ejs");
 
 // Aponta em qual porta o web server vai rodar
-app.listen(port, () => {console.log(`Começou... https://localhost:${port}`);});
+app.listen(port, () => {console.log(`App startup...`);});
 
 // *** GET Routes - Mostra as paginas ***
 
