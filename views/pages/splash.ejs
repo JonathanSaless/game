@@ -1,1 +1,22 @@
-<h1>Splash screen</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head"); %>
+    <link rel="stylesheet" href="styles/splash.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div class="logo centralizar">
+        <h1>Splash</h1>
+      </div>
+
+      <div class="botao centralizar">
+        <input
+          type="button"
+          onclick="location.href='/menu';"
+          value="Menu"
+        />
+      </div>
+    </div>
+  </body>
+</html>
