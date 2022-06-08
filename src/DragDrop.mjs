@@ -1,16 +1,19 @@
 import interact from "https://cdn.interactjs.io/v1.9.20/interactjs/index.js";
 // import interact from "interactjs";
+import { Score } from "./Score.mjs";
+
+const score = new Score("score");
 
 /**
  * A partir de um id cria uma zona de drop.
  * @param {String} trash_id id html da lixeira. Ex: #trashPapel
  */
-function dropzone(trash_id, acceptable_id) {
-  interact(trash_id).dropzone({
-    accept: acceptable_id,
+function dropzone(trash_obj) {
+  interact(trash_obj.trash_id).dropzone({
     ondrop: (event) => {
       var draggableElement = event.relatedTarget;
-      draggableElement.style.visibility = "hidden";
+      score.earn_score(1000, 1);
+      draggableElement.remove();
     },
   });
 }
