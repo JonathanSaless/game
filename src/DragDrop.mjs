@@ -9,15 +9,21 @@ const score = new Score("score");
  * @param {String} trash_id id html da lixeira. Ex: #trashPapel
  */
 function dropzone(trash_obj) {
-  interact(trash_obj.trash_id).dropzone({
-    accept: trash_obj.acceptable_class,
-    overlap: 1,
-    ondrop: (event) => {
-      var draggableElement = event.relatedTarget;
-      score.earn_score(1000, 1);
-      draggableElement.remove();
-    },
-  });
+  interact(trash_obj.trash_id)
+    .dropzone({
+      accept: trash_obj.acceptable_class,
+      overlap: 1,
+      ondrop: (event) => {
+        var draggableElement = event.relatedTarget;
+        score.earn_score(1000, 1);
+        draggableElement.remove();
+      },
+    })
+    .on("hold", (event) => {
+      console.log(
+        "Ao precionar a lixeira, deve aparecer alguns exemplos de lixos compativeis"
+      );
+    });
 }
 
 /**
