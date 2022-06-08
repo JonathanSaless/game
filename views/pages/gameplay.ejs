@@ -1,35 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-    />
-    <link rel="manifest" href="/manifest.json" />
-    <script src="/src/index.mjs" type="module"></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>ColetaPARA - Grid style</title>
+    <%- include("../partials/head"); %>
+    <link rel="stylesheet" href="styles/gameplay.css" />
+    <script src="src/index.mjs" type="module"></script>
   </head>
   <body>
     <div id="main">
       <div class="topbar">
         <div id="score">0000</div>
-        <div id="life">&#128516&#128516&#128516</div>
+        <div id="life">
+          <img src="assets/svgs/pixel_heart.svg">
+          <img src="assets/svgs/pixel_heart.svg">
+          <img src="assets/svgs/pixel_heart.svg">
+        </div>
       </div>
       <div class="objects notSelected">
         <div class="lixo objPlastico"></div>
         <div class="lixo objMetal"></div>
         <div class="lixo objPapel"></div>
         <div class="lixo objOrganico"></div>
+        <div class="lixo objVidro"></div>
       </div>
       <div class="footer">
-        <img class="lixeira trashPlastico" src="assets/imgs/lixeira.png"/>
-        <div class="lixeira trashMetal"></div>
-        <div class="lixeira trashPapel"></div>
-        <div class="lixeira trashOrganico"></div>
-        <div class="lixeira trashVidro"></div>
+        <img class="lixeira trashPlastico" src="assets/svgs/pixel_lixeira_plastico.svg" />
+        <img class="lixeira trashMetal" src="assets/svgs/pixel_lixeira_metal.svg" />
+        <img class="lixeira trashPapel" src="assets/svgs/pixel_lixeira_papel.svg" />
+        <img class="lixeira trashOrganico" src="assets/svgs/pixel_lixeira_organico.svg" />
+        <img class="lixeira trashVidro" src="assets/svgs/pixel_lixeira_vidro.svg" />
       </div>
     </div>
   </body>
