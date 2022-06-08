@@ -10,6 +10,8 @@ const score = new Score("score");
  */
 function dropzone(trash_obj) {
   interact(trash_obj.trash_id).dropzone({
+    accept: trash_obj.acceptable_class,
+    overlap: 1,
     ondrop: (event) => {
       var draggableElement = event.relatedTarget;
       score.earn_score(1000, 1);
