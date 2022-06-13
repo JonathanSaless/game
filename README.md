@@ -24,10 +24,18 @@ npm run dev
 
 3. Para acessar o projeto utilize o seguinte endereço no navegador:
 
-<http://localhost:3000>
+  <http://localhost:3000>
 
 Para facilitar o desenvolvimento, estamos utilizando o pacote `nodemon`, que
 reinicia o serviço assim que qualquer arquivo do projeto seja salvo.
+
+## ⚛️ Onde o projeto está rodando
+
+Atualmente, o deploy do projeto está sendo realizado através do
+[Heroku](https://devcenter.heroku.com/categories/reference). No endereço a
+seguir:
+
+  <https://coletapara.herokuapp.com/>
 
 ## 🖼️ Fontes de media
 
