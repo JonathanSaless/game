@@ -1,4 +1,4 @@
-# ♻️ ColetaPará
+# ♻️ ColetaPará 
 
 Projeto desenvolvido durante a disciplina de Lab. de Engenharia de Software, no
 período de 2022.2
